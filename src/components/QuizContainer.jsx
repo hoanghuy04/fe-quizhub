@@ -1,15 +1,10 @@
-// const response = await fetch('http://localhost:3000/chuong123-lms');
-// const response = await fetch('http://localhost:3000/chuong-3-file1');
-// const response = await fetch('http://192.168.100.2:3000/chuong-3-file1');
-// const response = await fetch('http://localhost:3000/chuong-3-file2');
-// const response = await fetch('http://localhost:3000/chuong-4-file1');
-// const response = await fetch('http://localhost:3000/chuon-4-file2');
-
 import React, { useState, useEffect } from 'react';
-import { Pagination, Button } from 'antd';
+import { Pagination, Button, Select } from 'antd';
 import Question from './Question';
 import Modal from './Modal';
 import Results from './Results';
+
+const { Option } = Select;
 
 const QuizContainer = () => {
   const [shuffledQuizData, setShuffledQuizData] = useState([]);
@@ -22,8 +17,18 @@ const QuizContainer = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [showQuestionList, setShowQuestionList] = useState(false); // Toggle question list on mobile
+  const [showQuestionList, setShowQuestionList] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState('chuong-3-file1'); // Default package
   const questionsPerPage = 50;
+
+  // Available question packages
+  const questionPackages = [
+    { value: 'chuong123-lms', label: 'Chương 1-2-3 LMS' },
+    { value: 'chuong-3-file1', label: 'Chương 3 - File 1' },
+    { value: 'chuong-3-file2', label: 'Chương 3 - File 2' },
+    { value: 'chuong-4-file1', label: 'Chương 4 - File 1' },
+    { value: 'chuong-4-file2', label: 'Chương 4 - File 2' },
+  ];
 
   const shuffleArray = (array) => {
     const newArray = [...array];
@@ -34,10 +39,11 @@ const QuizContainer = () => {
     return newArray;
   };
 
-  const fetchQuestions = async () => {
+  const fetchQuestions = async (packageValue) => {
     try {
       setLoading(true);
-      const response = await fetch('http://192.168.100.2:3000/chuong-3-file1');
+      // Use dynamic IP or localhost based on environment; adjust as needed
+      const response = await fetch(`http://192.168.100.2:3000/${packageValue}`);
       if (!response.ok) {
         throw new Error('Không thể lấy dữ liệu câu hỏi');
       }
@@ -58,12 +64,12 @@ const QuizContainer = () => {
     setScore(0);
     setShowResults(false);
     setCurrentPage(1);
-    fetchQuestions();
+    fetchQuestions(selectedPackage);
   };
 
   useEffect(() => {
     initQuiz();
-  }, []);
+  }, [selectedPackage]); // Re-fetch when package changes
 
   const handleOptionClick = (optionIndex, questionIndex) => {
     if (answered[questionIndex]) return;
@@ -85,7 +91,7 @@ const QuizContainer = () => {
     if (page !== currentPage) {
       setCurrentPage(page);
     }
-    setShowQuestionList(false); // Hide question list after selection on mobile
+    setShowQuestionList(false);
   };
 
   const handleNext = () => {
@@ -139,6 +145,10 @@ const QuizContainer = () => {
     setShowQuestionList(!showQuestionList);
   };
 
+  const handlePackageChange = (value) => {
+    setSelectedPackage(value);
+  };
+
   const answeredCount = answered.filter(Boolean).length;
   const progressPercentage = shuffledQuizData.length
     ? ((currentQuestionIndex + 1) / shuffledQuizData.length) * 100
@@ -159,18 +169,34 @@ const QuizContainer = () => {
   return (
     <div className="max-w-6xl mx-auto p-4 bg-gray-100 min-h-screen">
       <div className="flex flex-col gap-4">
-        {/* Toggle button for question list on mobile */}
-        <div className="md:hidden">
-          <Button
-            type="primary"
-            onClick={toggleQuestionList}
-            className="w-full"
-          >
-            {showQuestionList ? 'Ẩn danh sách câu hỏi' : 'Hiện danh sách câu hỏi'}
-          </Button>
+        {/* Package selection and toggle button */}
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div className="w-full md:w-1/3">
+            <Select
+              value={selectedPackage}
+              onChange={handlePackageChange}
+              className="w-full"
+              size="large"
+            >
+              {questionPackages.map((pkg) => (
+                <Option key={pkg.value} value={pkg.value}>
+                  {pkg.label}
+                </Option>
+              ))}
+            </Select>
+          </div>
+          <div className="md:hidden">
+            <Button
+              type="primary"
+              onClick={toggleQuestionList}
+              className="w-full"
+            >
+              {showQuestionList ? 'Ẩn danh sách câu hỏi' : 'Hiện danh sách câu hỏi'}
+            </Button>
+          </div>
         </div>
 
-        {/* Question list (hidden by default on mobile) */}
+        {/* Question list */}
         <div
           className={`w-full bg-white p-4 rounded-lg shadow-lg ${showQuestionList ? 'block' : 'hidden'
             } md:block md:w-1/4`}
