@@ -2,7 +2,7 @@ import React from 'react';
 
 const Question = ({ question, index, answered, handleOptionClick }) => {
   return (
-    <div className="bg-white p-4 rounded-lg border border-gray-200 h-[400px]">
+    <div className="bg-white p-4 rounded-lg border border-gray-200">
       <h3 className="text-lg font-semibold mb-4">{question.question}</h3>
       <div className="space-y-2">
         {question.options.map((option, i) => (

@@ -1,17 +1,31 @@
 import React from 'react';
 import { Button } from 'antd';
 
-const Results = ({ score, total, restartQuiz }) => {
-    const percentage = Math.round((score / total) * 100);
-
+const Results = ({ score, total, restartQuiz, retryIncorrect, isRetryMode }) => {
     return (
-        <div className="mt-6 p-4 bg-blue-100 rounded-lg">
-            <h2 className="text-xl font-bold mb-4">Kết quả</h2>
-            <p>Số câu đúng: {score}/{total}</p>
-            <p>Tỷ lệ đúng: {percentage}%</p>
-            <Button type="primary" className="mt-4" onClick={restartQuiz}>
-                Làm lại
-            </Button>
+        <div className="text-center mt-6">
+            <h2 className="text-lg font-bold">Kết quả bài kiểm tra</h2>
+            <p className="text-base mb-4">
+                Bạn đã trả lời đúng {score}/{total} câu ({((score / total) * 100).toFixed(2)}%).
+            </p>
+            <div className="flex flex-wrap justify-center gap-2">
+                <Button
+                    type="primary"
+                    onClick={restartQuiz}
+                    className="min-w-[120px] h-10"
+                >
+                    Làm lại toàn bộ
+                </Button>
+                {!isRetryMode && (
+                    <Button
+                        type="default"
+                        onClick={retryIncorrect}
+                        className="min-w-[120px] h-10"
+                    >
+                        Làm lại câu sai
+                    </Button>
+                )}
+            </div>
         </div>
     );
 };

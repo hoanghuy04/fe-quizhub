@@ -8,6 +8,7 @@ const { Option } = Select;
 
 const QuizContainer = () => {
   const [shuffledQuizData, setShuffledQuizData] = useState([]);
+  const [originalQuizData, setOriginalQuizData] = useState([]); // Store original for retry
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [answered, setAnswered] = useState([]);
@@ -18,10 +19,10 @@ const QuizContainer = () => {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [showQuestionList, setShowQuestionList] = useState(false);
-  const [selectedPackage, setSelectedPackage] = useState('chuong-3-file1'); // Default package
+  const [selectedPackage, setSelectedPackage] = useState('chuong-3-file1');
+  const [isRetryMode, setIsRetryMode] = useState(false); // Track retry mode
   const questionsPerPage = 50;
 
-  // Available question packages
   const questionPackages = [
     { value: 'chuong123-lms', label: 'Chương 1-2-3 LMS' },
     { value: 'chuong-3-file1', label: 'Chương 3 - File 1' },
@@ -42,7 +43,6 @@ const QuizContainer = () => {
   const fetchQuestions = async (packageValue) => {
     try {
       setLoading(true);
-      // Use dynamic IP or localhost based on environment; adjust as needed
       const response = await fetch(`http://192.168.100.2:3000/${packageValue}`);
       if (!response.ok) {
         throw new Error('Không thể lấy dữ liệu câu hỏi');
@@ -50,6 +50,7 @@ const QuizContainer = () => {
       const data = await response.json();
       const shuffled = shuffleArray(data);
       setShuffledQuizData(shuffled);
+      setOriginalQuizData(data); // Store unshuffled data
       setAnswered(new Array(shuffled.length).fill(false));
       setAnswerStatus(new Array(shuffled.length).fill(null));
       setLoading(false);
@@ -59,17 +60,35 @@ const QuizContainer = () => {
     }
   };
 
-  const initQuiz = () => {
+  const initQuiz = (retryIncorrect = false) => {
     setCurrentQuestionIndex(0);
     setScore(0);
     setShowResults(false);
     setCurrentPage(1);
-    fetchQuestions(selectedPackage);
+    setIsRetryMode(retryIncorrect);
+
+    if (retryIncorrect) {
+      // Filter incorrect questions based on answerStatus
+      const incorrectIndices = answerStatus
+        .map((status, index) => (status === 'wrong' ? index : -1))
+        .filter((index) => index !== -1);
+      const incorrectQuestions = incorrectIndices.map((index) => shuffledQuizData[index]);
+      if (incorrectQuestions.length > 0) {
+        setShuffledQuizData(incorrectQuestions);
+        setAnswered(new Array(incorrectQuestions.length).fill(false));
+        setAnswerStatus(new Array(incorrectQuestions.length).fill(null));
+      } else {
+        setShuffledQuizData([]);
+        setShowResults(true); // No incorrect questions to retry
+      }
+    } else {
+      fetchQuestions(selectedPackage);
+    }
   };
 
   useEffect(() => {
     initQuiz();
-  }, [selectedPackage]); // Re-fetch when package changes
+  }, [selectedPackage]);
 
   const handleOptionClick = (optionIndex, questionIndex) => {
     if (answered[questionIndex]) return;
@@ -133,6 +152,10 @@ const QuizContainer = () => {
     initQuiz();
   };
 
+  const handleRetryIncorrect = () => {
+    initQuiz(true); // Retry only incorrect questions
+  };
+
   const handlePageChange = (page) => {
     setCurrentPage(page);
     const firstQuestionOfPage = (page - 1) * questionsPerPage;
@@ -167,24 +190,27 @@ const QuizContainer = () => {
   }
 
   return (
-    <div className="max-w-6xl mx-auto p-4 bg-gray-100 min-h-screen">
+    <div className="max-w-7xl mx-auto p-4 bg-gray-100 min-h-screen">
       <div className="flex flex-col gap-4">
-        {/* Package selection and toggle button */}
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div className="w-full md:w-1/3">
-            <Select
-              value={selectedPackage}
-              onChange={handlePackageChange}
-              className="w-full"
-              size="large"
-            >
-              {questionPackages.map((pkg) => (
-                <Option key={pkg.value} value={pkg.value}>
-                  {pkg.label}
-                </Option>
-              ))}
-            </Select>
-          </div>
+        {/* Package selection */}
+        <div className="w-full md:w-1/3">
+          <Select
+            value={selectedPackage}
+            onChange={handlePackageChange}
+            className="w-full"
+            size="large"
+          >
+            {questionPackages.map((pkg) => (
+              <Option key={pkg.value} value={pkg.value}>
+                {pkg.label}
+              </Option>
+            ))}
+          </Select>
+        </div>
+
+        {/* Main content: Question list and Question content side-by-side */}
+        <div className="flex flex-col md:flex-row gap-4">
+          {/* Toggle button for mobile */}
           <div className="md:hidden">
             <Button
               type="primary"
@@ -194,96 +220,106 @@ const QuizContainer = () => {
               {showQuestionList ? 'Ẩn danh sách câu hỏi' : 'Hiện danh sách câu hỏi'}
             </Button>
           </div>
-        </div>
 
-        {/* Question list */}
-        <div
-          className={`w-full bg-white p-4 rounded-lg shadow-lg ${showQuestionList ? 'block' : 'hidden'
-            } md:block md:w-1/4`}
-        >
-          <h2 className="text-base font-bold mb-3">Danh sách câu hỏi</h2>
-          <div className="grid grid-cols-5 gap-1">
-            {currentQuestions.map((_, index) => {
-              const globalIndex = indexOfFirstQuestion + index;
-              return (
-                <div
-                  key={globalIndex}
-                  className={`p-1 text-center rounded-lg cursor-pointer text-sm 
-                    ${currentQuestionIndex === globalIndex ? 'border-2 border-blue-500' : ''} 
-                    ${answerStatus[globalIndex] === 'correct' ? 'bg-green-200' : ''} 
-                    ${answerStatus[globalIndex] === 'wrong' ? 'bg-red-200' : ''} 
-                    ${!answered[globalIndex] ? 'bg-gray-200' : ''}`}
-                  onClick={() => handleQuestionSelect(globalIndex)}
-                >
-                  {globalIndex + 1}
+          {/* Question list */}
+          <div
+            className={`w-full md:w-1/4 bg-white p-4 rounded-lg shadow-lg ${showQuestionList ? 'block' : 'hidden'
+              } md:block`}
+          >
+            <h2 className="text-base font-bold mb-3">Danh sách câu hỏi</h2>
+            <div className="grid grid-cols-5 gap-1">
+              {currentQuestions.map((_, index) => {
+                const globalIndex = indexOfFirstQuestion + index;
+                return (
+                  <div
+                    key={globalIndex}
+                    className={`p-1 text-center rounded-lg cursor-pointer text-sm 
+                      ${currentQuestionIndex === globalIndex ? 'border-2 border-blue-500' : ''} 
+                      ${answerStatus[globalIndex] === 'correct' ? 'bg-green-200' : ''} 
+                      ${answerStatus[globalIndex] === 'wrong' ? 'bg-red-200' : ''} 
+                      ${!answered[globalIndex] ? 'bg-gray-200' : ''}`}
+                    onClick={() => handleQuestionSelect(globalIndex)}
+                  >
+                    {globalIndex + 1}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="mt-3">
+              <Pagination
+                current={currentPage}
+                pageSize={questionsPerPage}
+                total={shuffledQuizData.length}
+                onChange={handlePageChange}
+                showSizeChanger={false}
+                className="text-sm"
+              />
+            </div>
+          </div>
+
+          {/* Question content */}
+          <div className="w-full md:w-3/4 bg-white p-4 rounded-lg shadow-lg">
+            <h1 className="text-xl font-bold mb-3 text-center">
+              Trắc nghiệm Tư tưởng Hồ Chí Minh {isRetryMode ? '(Làm lại câu sai)' : ''}
+            </h1>
+            <div className="mb-3 text-sm">
+              Đã làm: {answeredCount}/{shuffledQuizData.length} câu
+            </div>
+            <div className="w-full h-4 bg-gray-200 rounded-full mb-3">
+              <div
+                className="h-full bg-blue-500 rounded-full transition-all"
+                style={{ width: `${progressPercentage}%` }}
+              ></div>
+            </div>
+            {shuffledQuizData.length > 0 ? (
+              <Question
+                question={shuffledQuizData[currentQuestionIndex]}
+                index={currentQuestionIndex}
+                answered={answered}
+                handleOptionClick={handleOptionClick}
+              />
+            ) : (
+              isRetryMode && (
+                <div className="text-center text-green-500">
+                  Chúc mừng! Bạn không có câu nào sai để làm lại.
                 </div>
-              );
-            })}
+              )
+            )}
+            {!showResults && (
+              <div className="flex flex-wrap justify-between mt-4 gap-2">
+                <Button
+                  disabled={currentQuestionIndex === 0}
+                  onClick={handlePrev}
+                  className="flex-1 min-w-[100px] h-10"
+                >
+                  Câu trước
+                </Button>
+                <Button
+                  disabled={currentQuestionIndex === shuffledQuizData.length - 1}
+                  onClick={handleNext}
+                  className="flex-1 min-w-[100px] h-10"
+                >
+                  Câu tiếp
+                </Button>
+                <Button
+                  type="primary"
+                  onClick={handleShowModal}
+                  className="flex-1 min-w-[100px] h-10"
+                >
+                  Nộp bài
+                </Button>
+              </div>
+            )}
+            {showResults && (
+              <Results
+                score={score}
+                total={shuffledQuizData.length}
+                restartQuiz={handleRestartQuiz}
+                retryIncorrect={handleRetryIncorrect}
+                isRetryMode={isRetryMode}
+              />
+            )}
           </div>
-          <div className="mt-3">
-            <Pagination
-              current={currentPage}
-              pageSize={questionsPerPage}
-              total={shuffledQuizData.length}
-              onChange={handlePageChange}
-              showSizeChanger={false}
-              className="text-sm"
-            />
-          </div>
-        </div>
-
-        {/* Question content */}
-        <div className="w-full bg-white p-4 rounded-lg shadow-lg">
-          <h1 className="text-xl font-bold mb-3 text-center">
-            Trắc nghiệm Tư tưởng Hồ Chí Minh
-          </h1>
-          <div className="mb-3 text-sm">
-            Đã làm: {answeredCount}/{shuffledQuizData.length} câu
-          </div>
-          <div className="w-full h-4 bg-gray-200 rounded-full mb-3">
-            <div
-              className="h-full bg-blue-500 rounded-full transition-all"
-              style={{ width: `${progressPercentage}%` }}
-            ></div>
-          </div>
-          {shuffledQuizData.length > 0 && (
-            <Question
-              question={shuffledQuizData[currentQuestionIndex]}
-              index={currentQuestionIndex}
-              answered={answered}
-              handleOptionClick={handleOptionClick}
-            />
-          )}
-          <div className="flex flex-wrap justify-between mt-4 gap-2">
-            <Button
-              disabled={currentQuestionIndex === 0}
-              onClick={handlePrev}
-              className="flex-1 min-w-[100px] h-10"
-            >
-              Câu trước
-            </Button>
-            <Button
-              disabled={currentQuestionIndex === shuffledQuizData.length - 1}
-              onClick={handleNext}
-              className="flex-1 min-w-[100px] h-10"
-            >
-              Câu tiếp
-            </Button>
-            <Button
-              type="primary"
-              onClick={handleShowModal}
-              className="flex-1 min-w-[100px] h-10"
-            >
-              Nộp bài
-            </Button>
-          </div>
-          {showResults && (
-            <Results
-              score={score}
-              total={shuffledQuizData.length}
-              restartQuiz={handleRestartQuiz}
-            />
-          )}
         </div>
       </div>
       <Modal
