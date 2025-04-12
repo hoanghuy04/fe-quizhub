@@ -1,3 +1,10 @@
+// const response = await fetch('http://localhost:3000/chuong123-lms');
+// const response = await fetch('http://localhost:3000/chuong-3-file1');
+// const response = await fetch('http://192.168.100.2:3000/chuong-3-file1');
+// const response = await fetch('http://localhost:3000/chuong-3-file2');
+// const response = await fetch('http://localhost:3000/chuong-4-file1');
+// const response = await fetch('http://localhost:3000/chuon-4-file2');
+
 import React, { useState, useEffect } from 'react';
 import { Pagination, Button } from 'antd';
 import Question from './Question';
@@ -14,10 +21,10 @@ const QuizContainer = () => {
   const [showResults, setShowResults] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1); // Trang hiện tại của danh sách câu hỏi
-  const questionsPerPage = 50; // Số câu hỏi mỗi trang
+  const [currentPage, setCurrentPage] = useState(1);
+  const [showQuestionList, setShowQuestionList] = useState(false); // Toggle question list on mobile
+  const questionsPerPage = 50;
 
-  // Hàm xáo trộn mảng
   const shuffleArray = (array) => {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -27,15 +34,10 @@ const QuizContainer = () => {
     return newArray;
   };
 
-  // Lấy dữ liệu từ json-server
   const fetchQuestions = async () => {
     try {
       setLoading(true);
-      // const response = await fetch('http://localhost:3000/chuong123-lms');
-      const response = await fetch('http://localhost:3000/chuong-3-file1');
-      // const response = await fetch('http://localhost:3000/chuong-3-file2');
-      // const response = await fetch('http://localhost:3000/chuong-4-file1');
-      // const response = await fetch('http://localhost:3000/chuon-4-file2');
+      const response = await fetch('http://192.168.100.2:3000/chuong-3-file1');
       if (!response.ok) {
         throw new Error('Không thể lấy dữ liệu câu hỏi');
       }
@@ -51,12 +53,11 @@ const QuizContainer = () => {
     }
   };
 
-  // Khởi tạo bài kiểm tra
   const initQuiz = () => {
     setCurrentQuestionIndex(0);
     setScore(0);
     setShowResults(false);
-    setCurrentPage(1); // Reset về trang đầu
+    setCurrentPage(1);
     fetchQuestions();
   };
 
@@ -64,35 +65,29 @@ const QuizContainer = () => {
     initQuiz();
   }, []);
 
-  // Xử lý chọn đáp án
   const handleOptionClick = (optionIndex, questionIndex) => {
     if (answered[questionIndex]) return;
-
     const newAnswered = [...answered];
     newAnswered[questionIndex] = true;
     setAnswered(newAnswered);
-
     const newAnswerStatus = [...answerStatus];
     const isCorrect = optionIndex === shuffledQuizData[questionIndex].correct;
     newAnswerStatus[questionIndex] = isCorrect ? 'correct' : 'wrong';
     setAnswerStatus(newAnswerStatus);
-
     if (isCorrect) {
       setScore(score + 1);
     }
   };
 
-  // Chuyển đến câu hỏi khi nhấp vào danh sách
   const handleQuestionSelect = (index) => {
     setCurrentQuestionIndex(index);
-    // Tự động chuyển trang nếu câu hỏi nằm ngoài trang hiện tại
     const page = Math.ceil((index + 1) / questionsPerPage);
     if (page !== currentPage) {
       setCurrentPage(page);
     }
+    setShowQuestionList(false); // Hide question list after selection on mobile
   };
 
-  // Tiến câu hỏi
   const handleNext = () => {
     if (currentQuestionIndex < shuffledQuizData.length - 1) {
       const newIndex = currentQuestionIndex + 1;
@@ -104,7 +99,6 @@ const QuizContainer = () => {
     }
   };
 
-  // Lùi câu hỏi
   const handlePrev = () => {
     if (currentQuestionIndex > 0) {
       const newIndex = currentQuestionIndex - 1;
@@ -116,71 +110,79 @@ const QuizContainer = () => {
     }
   };
 
-  // Hiển thị modal nộp bài
   const handleShowModal = () => {
     setShowModal(true);
   };
 
-  // Đóng modal
   const handleCloseModal = () => {
     setShowModal(false);
   };
 
-  // Nộp bài
   const handleSubmitQuiz = () => {
     setShowModal(false);
     setShowResults(true);
   };
 
-  // Làm lại bài kiểm tra
   const handleRestartQuiz = () => {
     initQuiz();
   };
 
-  // Xử lý thay đổi trang
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    // Nếu câu hỏi hiện tại không nằm trong trang mới, chuyển đến câu đầu tiên của trang
     const firstQuestionOfPage = (page - 1) * questionsPerPage;
     if (currentQuestionIndex < firstQuestionOfPage || currentQuestionIndex >= page * questionsPerPage) {
       setCurrentQuestionIndex(firstQuestionOfPage);
     }
   };
 
-  // Tính số câu đã trả lời
-  const answeredCount = answered.filter(Boolean).length;
+  const toggleQuestionList = () => {
+    setShowQuestionList(!showQuestionList);
+  };
 
-  // Tính tiến độ thanh progress
+  const answeredCount = answered.filter(Boolean).length;
   const progressPercentage = shuffledQuizData.length
     ? ((currentQuestionIndex + 1) / shuffledQuizData.length) * 100
     : 0;
 
-  // Lấy danh sách câu hỏi cho trang hiện tại
   const indexOfLastQuestion = currentPage * questionsPerPage;
   const indexOfFirstQuestion = indexOfLastQuestion - questionsPerPage;
   const currentQuestions = shuffledQuizData.slice(indexOfFirstQuestion, indexOfLastQuestion);
 
   if (loading) {
-    return <div className="text-center p-6">Đang tải câu hỏi...</div>;
+    return <div className="text-center p-4">Đang tải câu hỏi...</div>;
   }
 
   if (error) {
-    return <div className="text-center p-6 text-red-500">Lỗi: {error}</div>;
+    return <div className="text-center p-4 text-red-500">Lỗi: {error}</div>;
   }
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-gray-100 min-h-screen">
-      <div className="flex flex-col md:flex-row gap-6">
-        {/* Danh sách câu hỏi bên trái */}
-        <div className="w-full md:w-1/4 bg-white p-4 rounded-lg shadow-lg">
-          <h2 className="text-lg font-bold mb-4">Danh sách câu hỏi</h2>
-          <div className="grid grid-cols-5 gap-2">
+    <div className="max-w-6xl mx-auto p-4 bg-gray-100 min-h-screen">
+      <div className="flex flex-col gap-4">
+        {/* Toggle button for question list on mobile */}
+        <div className="md:hidden">
+          <Button
+            type="primary"
+            onClick={toggleQuestionList}
+            className="w-full"
+          >
+            {showQuestionList ? 'Ẩn danh sách câu hỏi' : 'Hiện danh sách câu hỏi'}
+          </Button>
+        </div>
+
+        {/* Question list (hidden by default on mobile) */}
+        <div
+          className={`w-full bg-white p-4 rounded-lg shadow-lg ${showQuestionList ? 'block' : 'hidden'
+            } md:block md:w-1/4`}
+        >
+          <h2 className="text-base font-bold mb-3">Danh sách câu hỏi</h2>
+          <div className="grid grid-cols-5 gap-1">
             {currentQuestions.map((_, index) => {
               const globalIndex = indexOfFirstQuestion + index;
               return (
                 <div
                   key={globalIndex}
-                  className={`p-2 text-center rounded-lg cursor-pointer 
+                  className={`p-1 text-center rounded-lg cursor-pointer text-sm 
                     ${currentQuestionIndex === globalIndex ? 'border-2 border-blue-500' : ''} 
                     ${answerStatus[globalIndex] === 'correct' ? 'bg-green-200' : ''} 
                     ${answerStatus[globalIndex] === 'wrong' ? 'bg-red-200' : ''} 
@@ -192,24 +194,27 @@ const QuizContainer = () => {
               );
             })}
           </div>
-          <div className="mt-4">
+          <div className="mt-3">
             <Pagination
               current={currentPage}
               pageSize={questionsPerPage}
               total={shuffledQuizData.length}
               onChange={handlePageChange}
               showSizeChanger={false}
+              className="text-sm"
             />
           </div>
         </div>
 
-        {/* Nội dung câu hỏi bên phải */}
-        <div className="w-full md:w-3/4 bg-white p-6 rounded-lg shadow-lg">
-          <h1 className="text-2xl font-bold mb-4 text-center">Trắc nghiệm Tư tưởng Hồ Chí Minh</h1>
-          <div className="mb-4">
+        {/* Question content */}
+        <div className="w-full bg-white p-4 rounded-lg shadow-lg">
+          <h1 className="text-xl font-bold mb-3 text-center">
+            Trắc nghiệm Tư tưởng Hồ Chí Minh
+          </h1>
+          <div className="mb-3 text-sm">
             Đã làm: {answeredCount}/{shuffledQuizData.length} câu
           </div>
-          <div className="w-full h-5 bg-gray-200 rounded-full mb-4">
+          <div className="w-full h-4 bg-gray-200 rounded-full mb-3">
             <div
               className="h-full bg-blue-500 rounded-full transition-all"
               style={{ width: `${progressPercentage}%` }}
@@ -223,20 +228,26 @@ const QuizContainer = () => {
               handleOptionClick={handleOptionClick}
             />
           )}
-          <div className="flex justify-between mt-6">
+          <div className="flex flex-wrap justify-between mt-4 gap-2">
             <Button
               disabled={currentQuestionIndex === 0}
               onClick={handlePrev}
+              className="flex-1 min-w-[100px] h-10"
             >
               Câu trước
             </Button>
             <Button
               disabled={currentQuestionIndex === shuffledQuizData.length - 1}
               onClick={handleNext}
+              className="flex-1 min-w-[100px] h-10"
             >
               Câu tiếp
             </Button>
-            <Button type="primary" onClick={handleShowModal}>
+            <Button
+              type="primary"
+              onClick={handleShowModal}
+              className="flex-1 min-w-[100px] h-10"
+            >
               Nộp bài
             </Button>
           </div>
