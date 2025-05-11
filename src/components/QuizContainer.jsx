@@ -3,8 +3,10 @@ import { Pagination, Button, Select } from 'antd';
 import Question from './Question';
 import Modal from './Modal';
 import Results from './Results';
+import { get } from '../services/request';
 
 const { Option } = Select;
+const BASE_URL = import.meta.env.VITE_BASE_URL
 
 const QuizContainer = () => {
   const [shuffledQuizData, setShuffledQuizData] = useState([]);
@@ -19,16 +21,23 @@ const QuizContainer = () => {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [showQuestionList, setShowQuestionList] = useState(false);
-  const [selectedPackage, setSelectedPackage] = useState('chuong-3-file1');
+  const [selectedPackage, setSelectedPackage] = useState('chuong-4-file1');
   const [isRetryMode, setIsRetryMode] = useState(false); // Track retry mode
   const questionsPerPage = 50;
 
+  // const questionPackages = [
+  //   { value: 'chuong123-lms', label: 'Chương 1-2-3 LMS' },
+  //   { value: 'chuong-3-file1', label: 'Chương 3 - File 1' },
+  //   { value: 'chuong-3-file2', label: 'Chương 3 - File 2' },
+  //   { value: 'chuong-4-file1', label: 'Chương 4 - File 1' },
+  //   { value: 'chuong-4-file2', label: 'Chương 4 - File 2' },
+  // ];
+
   const questionPackages = [
-    { value: 'chuong123-lms', label: 'Chương 1-2-3 LMS' },
-    { value: 'chuong-3-file1', label: 'Chương 3 - File 1' },
-    { value: 'chuong-3-file2', label: 'Chương 3 - File 2' },
     { value: 'chuong-4-file1', label: 'Chương 4 - File 1' },
     { value: 'chuong-4-file2', label: 'Chương 4 - File 2' },
+    { value: 'chuong-4-I_lms', label: 'Chương 4 - I' },
+    { value: 'chuong-4-II_lms', label: 'Chương 4 - II' },
   ];
 
   const shuffleArray = (array) => {
@@ -43,11 +52,7 @@ const QuizContainer = () => {
   const fetchQuestions = async (packageValue) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://192.168.100.2:3000/${packageValue}`);
-      if (!response.ok) {
-        throw new Error('Không thể lấy dữ liệu câu hỏi');
-      }
-      const data = await response.json();
+      const data = await get(`/${packageValue}`);
       const shuffled = shuffleArray(data);
       setShuffledQuizData(shuffled);
       setOriginalQuizData(data); // Store unshuffled data

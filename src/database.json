@@ -2457,7 +2457,7 @@
             "correct": 0
         }
     ],
-    "chuon-4-file2": [
+    "chuong-4-file2": [
         {
             "question": "1. Theo tư tưởng Hồ Chí Minh, Đảng Cộng sản Việt Nam là sản phẩm của sự kết hợp giữa:",
             "options": [
@@ -2999,6 +2999,940 @@
                 "Thư gửi các đồng chí Bắc Bộ",
                 "Tuyên ngôn độc lập",
                 "Cả a, b, c đều sai"
+            ],
+            "correct": 3
+        }
+    ],
+    "chuong-4-I_lms": [
+        {
+            "question": "Theo Hồ Chí Minh, xây dựng Đảng Cộng sản Việt Nam thành một đảng có đạo đức cách mạng tức là xây dựng Đảng để Đảng trở thành một đảng văn minh, hay Hồ Chí Minh hay gọi đó là:",
+            "options": [
+                "Một Đảng dựa trên nền tảng chủ nghĩa Lênin",
+                "Một Đảng cách mạng chân chính",
+                "Một Đảng cách mạng vì dân",
+                "Một Đảng cách mạng kiểu mới"
+            ],
+            "correct": 1,
+            "location": "I.2.a từ 'Xây dựng Đảng Cộng sản Việt Nam thành một Đảng...' tới '...một Đảng cách mạng chân chính.'"
+        },
+        {
+            "question": "Nội dung đặc trưng về chính trị được khẳng định trong Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011) là gì?",
+            "options": [
+                "Có nền kinh tế phát triển cao dựa trên lực lượng sản xuất hiện đại và quan hệ sản xuất tiến bộ phù hợp",
+                "Dân giàu, nước mạnh, dân chủ, công bằng, văn minh",
+                "Do nhân dân làm chủ",
+                "Do nhân dân lao động làm chủ"
+            ],
+            "correct": 2,
+            "location": "III.1 từ 'Phải đề ra đường lối, chủ trương đúng đắn...' tới '...phù hợp với hoàn cảnh của đất nước từng giai đoạn, thời kỳ.'"
+        },
+        {
+            "question": "Nền tảng tư tưởng của Đảng Cộng sản Việt Nam theo Hồ Chí Minh là gì?",
+            "options": [
+                "Chủ nghĩa Tam dân",
+                "Chủ nghĩa Mác - Lênin",
+                "Chủ nghĩa Mác – Lênin và tư tưởng Hồ Chí Minh",
+                "Chủ nghĩa Mao Trạch Đông"
+            ],
+            "correct": 1,
+            "location": "I.2.b từ 'Đảng lấy chủ nghĩa Mác - Lênin làm nền tảng tư tưởng...' tới '...chủ nghĩa Lênin."
+        },
+        {
+            "question": "Chọn các phương án sau để điền vào chỗ trống: “… là một truyền thống cực kỳ quý báu của Đảng và của dân tộc ta. Các đồng chí từ … đến các chi bộ cần phải giữ gìn sự đoàn kết nhất trí của Đảng như giữ gìn …”.",
+            "options": [
+                "Đoàn kết quốc tế – cơ sở - con ngươi của mắt mình",
+                "Đoàn kết – trung ương - con ngươi của mắt mình",
+                "Đoàn kết quốc tế– trung ương - con ngươi của mắt mình",
+                "Đại đoàn kết – cơ sở - con ngươi của mắt mình"
+            ],
+            "correct": 1,
+            "location": "I.2.b từ 'Đoàn kết, thống nhất trong Đảng...' tới '...con ngươi của mắt mình.'"
+        },
+        {
+            "question": "Nội dung nào là điểm đặc sắc Hồ Chí Minh bổ sung cho lý luận của Lênin về đảng kiểu mới?",
+            "options": [
+                "Xây dựng Đảng thật sự trong sạch",
+                "Xây dựng Đảng đấu tranh phòng, chống tham nhũng",
+                "Xây dựng Đảng chống các biểu hiện tự diễn biến, tự chuyển hóa",
+                "Xây dựng Đảng là đạo đức, là văn minh"
+            ],
+            "correct": 3,
+            "location": "I.2.a từ 'Hồ Chí Minh nhấn mạnh: “Mỗi đảng viên...' tới '...Đảng cách mạng chân chính.'"
+        },
+        {
+            "question": "Quy luật ra đời chung của các Đảng Cộng sản trên thế giới theo học thuyết Mác – Lênin là gì?",
+            "options": [
+                "Chủ nghĩa Mác - Lênin với phong trào công nhân và phong trào của trí thức yêu nước",
+                "Chủ nghĩa xã hội khoa học với phong trào công nhân",
+                "Chủ nghĩa xã hội khoa học với phong trào nông dân",
+                "Chủ nghĩa Mác - Lênin kết hợp với phong trào của đội ngũ trí thức"
+            ],
+            "correct": 1,
+            "location": "I.1 từ 'Trên thế giới, nói chung, sự ra đời...' tới '...phong trào công nhân.'"
+        },
+        {
+            "question": "Hãy chọn luận điểm chưa chính xác trong các câu sau để thể hiện nội dung: “Đảng vừa là người lãnh đạo, vừa là người đầy tớ thật trung thành của nhân dân”?",
+            "options": [
+                "Đảng không phải làm quan, sai khiến quần chúng mà phải làm đầy tớ cho quần chúng và phải làm cho ra trò",
+                "Đảng không phải là tổ chức để làm quan phát tài",
+                "Ngoài lợi ích của dân tộc, của Tổ quốc, thì Đảng không có lợi ích nào khác",
+                "Đầy tớ là tôi tớ, tôi đòi, theo đuôi quần chúng"
+            ],
+            "correct": 3,
+            "location": "I.2.b từ 'Đảng Cộng sản Việt Nam không phải trên trời sa xuống...' tới '...học hỏi quần chúng nhưng không theo đuôi quần chúng.'"
+        },
+        {
+            "question": "Cuối thế kỷ XIX đầu thế kỷ XX, mâu thuẫn cơ bản và chủ yếu ở Việt Nam là:",
+            "options": [
+                "Mâu thuẫn giữa toàn thể nhân dân Việt Nam với giai cấp tư sản",
+                "Mâu thuẫn giữa toàn thể nhân dân Việt Nam với đế quốc Mỹ xâm lược bà tay sai",
+                "Mâu thuẫn cơ bản giữa toàn thể nhân dân Việt Nam với đế quốc và tay sai",
+                "Mâu thuẫn giữa toàn thể nhân dân Việt Nam với giai cấp địa chủ"
+            ],
+            "correct": 2,
+            "location": "I.1 từ 'Quan điểm của Hồ Chí Minh trên đây...' tới '...đế quốc và tay sai.'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, muôn việc thành công hoặc thất bại, đều do cán bộ tốt hoặc:",
+            "options": [
+                "dở",
+                "yếu",
+                "xấu",
+                "kém"
+            ],
+            "correct": 3,
+            "location": "I.2.c từ 'Hồ Chí Minh đặc biệt coi trọng...' tới '...cán bộ tốt hoặc kém.'"
+        },
+        {
+            "question": "Sứ mệnh lịch sử của Đảng Cộng sản Việt Nam là gì?",
+            "options": [
+                "Lãnh đạo thực hiện đấu tranh chống nghèo nàn lạc hậu và biến đổi khí hậu",
+                "Lãnh đạo đất nước trong sự nghiệp giải phóng dân tộc và đi lên chủ nghĩa xã hội",
+                "Lãnh đạo đất nước trong sự nghiệp giải phóng dân tộc và đi lên tư bản chủ nghĩa",
+                "Lãnh đạo đấu tranh chống thực dân Pháp và can thiệp Mỹ"
+            ],
+            "correct": 1,
+            "location": "I.1 từ 'Đảng Cộng sản Việt Nam ra đời...' tới '...giải phóng dân tộc và đi lên chủ nghĩa xã hội.'"
+        },
+        {
+            "question": "Chủ tịch Hồ Chí Minh kế thừa quan điểm nào của Lênin về xây dựng Đảng khi thành lập Đảng Cộng sản Việt Nam vào đầu năm 1930?",
+            "options": [
+                "Đảng kiểu mới của giai cấp tư sản",
+                "Đảng công nhân",
+                "Đảng kiểu cũ của giai cấp vô sản",
+                "Đảng kiểu mới của giai cấp vô sản"
+            ],
+            "correct": 3,
+            "location": "I.1 từ 'Sự ra đời của Đảng Cộng sản Việt Nam...' tới '...Đảng kiểu mới của Lênin.'"
+        },
+        {
+            "question": "Đáp án nào sau đây chưa đúng theo quan điểm của Hồ Chí Minh về công tác cán bộ?",
+            "options": [
+                "Cán bộ phải phòng và chống các tiêu cực, thường xuyên kiểm tra, giúp đỡ cán bộ",
+                "Cán bộ phải có chế độ tiền lương cao; được đãi ngộ đặc biệt",
+                "Đề bạt đúng cán bộ; phải sắp xếp, sử dụng cán bộ cho đúng",
+                "Chú trọng huấn luyện cán bộ"
+            ],
+            "correct": 1,
+            "location": "I.2.c từ 'Hồ Chí Minh đặc biệt coi trọng...' tới '...huấn luyện cán bộ.'"
+        },
+        {
+            "question": "Hoàn thành luận điểm của Hồ Chí Minh được trích trong tác phẩm Đường Kách mệnh (1927): “Cách mạng trước hết phải có …, để trong thì vận động và tổ chức dân chúng, ngoài thì liên lạc với dân tộc bị áp bức và vô sản giai cấp mọi nơi”.",
+            "options": [
+                "Đảng Cộng sản Việt Nam",
+                "đảng vô sản",
+                "đảng cách mệnh",
+                "đảng cách mạng chân chính"
+            ],
+            "correct": 2,
+            "location": "I.1 từ 'Trong tác phẩm Đường cách mệnh...' tới '...vô sản giai cấp mọi nơi.'"
+        },
+        {
+            "question": "Mục tiêu tổng quát khi kết thúc thời kỳ quá độ ở nước ta được nêu trong Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011) là gì?",
+            "options": [
+                "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước gắn với phát triển kinh tế tri thức, bảo vệ tài nguyên, môi trường",
+                "Xây dựng được về cơ bản nền tảng kinh tế của chủ nghĩa xã hội với hạ tầng cơ sở về chính trị, tư tưởng, văn hóa phù hợp",
+                "Phấn đấu đến năm 2030 nước ta cơ bản trở thành nước công nghiệp theo hướng hiện đại",
+                "Xây dựng được về cơ bản nền tảng kinh tế của chủ nghĩa xã hội với kiến trúc thượng tầng về chính trị, tư tưởng, văn hóa phù hợp"
+            ],
+            "correct": 3,
+            "location": "III.1 từ 'Phải đề ra đường lối, chủ trương đúng đắn...' tới '...phù hợp với hoàn cảnh của đất nước từng giai đoạn, thời kỳ.'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, “thang thuốc” tốt nhất để làm cho phần tốt trong mỗi tổ chức và mỗi con người nảy nở và phần xấu bị mất dần đi là gì?",
+            "options": [
+                "Tự phê bình và phê bình",
+                "Đoàn kết, thống nhất trong Đảng",
+                "Đoàn kết quốc tế",
+                "Tập trung dân chủ"
+            ],
+            "correct": 0,
+            "location": "I.2.b từ 'Tự phê bình và phê bình...' tới '...như mỗi ngày phải rửa mặt.'"
+        },
+        {
+            "question": "Mục tiêu đến giữa thế kỷ XXI được nêu trong Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011) là gì?",
+            "options": [
+                "Xây dựng nước ta trở thành một nước công nghiệp hiện đại, theo định hướng xã hội chủ nghĩa",
+                "Xây dựng được về cơ bản nền tảng kinh tế của chủ nghĩa xã hội với kiến trúc thượng tầng về chính trị, tư tưởng, văn hóa phù hợp",
+                "Phát triển nền kinh tế thị trường định hướng chủ nghĩa xã hội",
+                "Phấn đấu đến năm 2030 nước ta cơ bản trở thành nước công nghiệp theo hướng hiện đại"
+            ],
+            "correct": 0,
+            "location": "III.1 từ 'Phải đề ra đường lối, chủ trương đúng đắn...' tới '...phù hợp với hoàn cảnh của đất nước từng giai đoạn, thời kỳ.'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, “tổ chức Đảng phải trong sạch, vững mạnh” là điều kiện tiên quyết để thực hiện tốt nguyên tắc sinh hoạt Đảng nào?",
+            "options": [
+                "Tự phê bình và phê bình",
+                "Tập trung dân chủ",
+                "Đoàn kết quốc tế",
+                "Đoàn kết, thống nhất trong Đảng"
+            ],
+            "correct": 1,
+            "location": "I.2.b từ 'Tập trung dân chủ...' tới '...Đảng trong sạch, vững mạnh.'"
+        },
+        {
+            "question": "Hãy chọn đáp án đúng theo Hồ Chí Minh khi nói về nền tảng tư tưởng của Đảng?",
+            "options": [
+                "Đảng phải hoạt động theo nguyên tắc hiệp thương dân chủ",
+                "Đảng được tổ chức và hoạt động theo nguyên tắc tự phê bình và phê bình",
+                "Đảng muốn vững phải có chủ nghĩa làm cốt",
+                "Đảng phải thực hiện đoàn kết quốc tế"
+            ],
+            "correct": 2,
+            "location": "I.2.b từ 'Đảng muốn vững thì phải có chủ nghĩa làm cốt' tới 'tàu không có bàn chỉ nam'"
+        },
+        {
+            "question": "Trong tác phẩm Đường cách mệnh (1927), theo Hồ Chí Minh phải lấy chủ nghĩa gì “làm cốt”?",
+            "options": [
+                "Chủ nghĩa yêu nước",
+                "Chủ nghĩa Mác-Lênin",
+                "Chủ nghĩa duy vật",
+                "Chủ nghĩa xã hội khoa học"
+            ],
+            "correct": 1,
+            "location": "I.2.b từ 'Đảng muốn vững thì phải có chủ nghĩa làm cốt' tới 'chủ nghĩa chân chính nhất, chắc chắn nhất, cách mệnh nhất là chủ nghĩa Lênin'"
+        },
+        {
+            "question": "Nội dung đặc trưng bao trùm, tổng quát được khẳng định trong Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011) là gì?",
+            "options": [
+                "Có nền văn hóa tiên tiến, đậm đà bản sắc dân tộc",
+                "Có nền kinh tế phát triển cao dựa trên lực lượng sản xuất hiện đại và quan hệ sản xuất tiến bộ phù hợp",
+                "Dân giàu, nước mạnh, dân chủ, công bằng, văn minh",
+                "Dân giàu, nước mạnh, xã hội công bằng, dân chủ, văn minh"
+            ],
+            "correct": 2,
+            "location": "Không xác định rõ trong tài liệu hiện tại"
+        },
+        {
+            "question": "Tác phẩm nào của Hồ Chí Minh nêu lên luận điểm: “Đảng có vững, cách mệnh mới thành công, cũng như người cầm lái có vững thuyền mới chạy”.",
+            "options": [
+                "Đường cách mệnh (1927)",
+                "Lịch sử nước ta (1942)",
+                "Thường thức chính trị (1953)",
+                "Đạo đức cách mạng (1958)"
+            ],
+            "correct": 0,
+            "location": "I.1 từ 'Cách mạng trước hết phải có “đảng cách mệnh' tới 'Đảng có vững, cách mệnh mới thành công, cũng như người cầm lái có vững thuyền mới chạy”'"
+        },
+        {
+            "question": "Hồ Chí Minh căn dặn trong tác phẩm Di chúc, công việc “cần phải làm trước tiên” để làm cho mỗi đảng viên, mỗi đoàn viên, mỗi chi bộ đều ra sức làm tròn nhiệm vụ đảng giao phó cho mình là gì?",
+            "options": [
+                "Chỉnh đốn lại Đảng",
+                "Chỉnh đốn lại tổ chức “dự bị của Đảng”",
+                "Chỉnh đốn lại khối liên minh công nhân, nông dân và đội ngũ trí thức",
+                "Chỉnh đốn lại đội ngũ cán bộ"
+            ],
+            "correct": 0,
+            "location": "I.2.b từ 'việc cần phải làm trước tiên' tới 'toàn tâm toàn ý phục vụ nhân dân'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, cần quan tâm đến vấn đề gì để cán bộ, đảng viên làm tròn trách nhiệm “xây dựng Đảng là đạo đức, là văn minh”?",
+            "options": [
+                "Lối sống",
+                "Tài năng",
+                "Đạo đức",
+                "Văn hóa"
+            ],
+            "correct": 2,
+            "location": "I.2.a từ 'Đảng ta là đạo đức, là văn minh' tới 'phải giữ gìn Đảng ta thật trong sạch, phải xứng đáng là người lãnh đạo, là người đầy tớ thật trung thành của nhân dân'"
+        },
+        {
+            "question": "Tác phẩm nào của Hồ Chí Minh viết: “Đảng muốn vững phải có chủ nghĩa làm cốt, trong Đảng ai cũng phải hiểu, ai cũng phải theo chủ nghĩa ấy”.",
+            "options": [
+                "Tuyên ngôn độc lập (1945)",
+                "Lời kêu gọi toàn quốc kháng chiến (1946)",
+                "Đường cách mệnh (1927)",
+                "Di chúc (1969)"
+            ],
+            "correct": 2,
+            "location": "I.2.b từ 'Đảng muốn vững thì phải có chủ nghĩa làm cốt' tới 'ai cũng phải hiểu, ai cũng phải theo chủ nghĩa ấy'"
+        },
+        {
+            "question": "Ở Việt Nam, đầu thế kỷ XX, mục tiêu chung của các tổ chức yêu nước, phong trào yêu nước, phong trào đấu tranh của công nhân là gì?",
+            "options": [
+                "Giành độc lập, tự do cho dân tộc",
+                "Giải phóng giai cấp",
+                "Chống nghèo nàn, lạc hậu, áp bức, bóc lột, bất công",
+                "Xây dựng thành công chủ nghĩa xã hội"
+            ],
+            "correct": 0,
+            "location": "Không xác định rõ trong tài liệu hiện tại"
+        },
+        {
+            "question": "Hồ Chí Minh đã bổ sung thêm phong trào nào vào quy luật ra đời của Đảng Cộng sản Việt Nam?",
+            "options": [
+                "Phong trào công dân",
+                "Phong trào đấu tranh giải phóng dân tộc",
+                "Phong trào dân sinh, dân chủ",
+                "Phong trào yêu nước"
+            ],
+            "correct": 3,
+            "location": "Không xác định rõ trong tài liệu hiện tại"
+        },
+        {
+            "question": "Cán bộ, đảng viên cần phòng, chống những căn bệnh nào sau đây theo Hồ Chí Minh?",
+            "options": [
+                "Tham ô, lãng phí, quan liêu",
+                "Kéo bè, kéo cánh",
+                "Chủ nghĩa cá nhân",
+                "Chạy chức, chạy quyền, chạy tuổi"
+            ],
+            "correct": 0,
+            "location": "I.3 từ 'Những căn bệnh cần phòng chống' tới 'tham ô, lãng phí, quan liêu là kẻ thù của nhân dân, của bộ đội, của Chính phủ, của đoàn thể'"
+        },
+        {
+            "question": "Hoàn thành câu nói sau trong bài viết “Ý kiến về việc làm và xuất bản loại sách “người tốt, việc tốt” của Hồ Chí Minh: “Một dân tộc, một đảng và mỗi con người ngày hôm qua là vĩ đại, có sức hấp dẫn lớn, không nhất định hôm nay và mai sau vẫn được mọi người yêu mến và ca ngợi, nếu lòng dạ không trong sáng nữa, nếu sa vào …”.",
+            "options": [
+                "vòng danh lợi",
+                "chủ nghĩa thực dân",
+                "chủ nghĩa cá nhân",
+                "chủ nghĩa đế quốc"
+            ],
+            "correct": 2,
+            "location": "Từ bài viết “Ý kiến về việc làm và xuất bản loại sách “người tốt, việc tốt”"
+        },
+        {
+            "question": "Điền vào chỗ trống để hoàn thành luận điểm trong tác phẩm Di chúc của Hồ Chí Minh: “Mỗi đảng viên và cán bộ phải thấm nhuần … , thật sự cần kiệm liêm chính, chí công vô tư”.",
+            "options": [
+                "tư tưởng lấy dân làm gốc",
+                "đạo đức cách mạng",
+                "lời dạy của Lênin",
+                "quan điểm dân là chủ và dân làm chủ"
+            ],
+            "correct": 1,
+            "location": "Tác phẩm Di chúc, đoạn từ 'Mỗi đảng viên và cán bộ phải thấm nhuần đạo đức cách mạng' tới 'thật sự cần kiệm liêm chính, chí công vô tư'"
+        },
+        {
+            "question": "Những biểu hiện trực tiếp về thoái hóa, biến chất nhất của đội ngũ cán bộ, đảng viên là ở lĩnh vực nào?",
+            "options": [
+                "Đoàn kết, gắn bó mật thiết với nhân dân, tự giác trong mọi việc",
+                "Tính nêu gương, đời tư trong sáng, lối sống giản dị",
+                "Đạo đức, lối sống và tinh thần trách nhiệm trong công việc",
+                "Tinh thần tự giác, chấp hành nội quy công sở, tổ chức kỷ luật"
+            ],
+            "correct": 2,
+            "location": "Không xác định rõ trong tài liệu hiện tại"
+        },
+        {
+            "question": "Hồ Chí Minh ví Đảng Cộng sản giống như “người cầm lái” cho con thuyền cách mạng. Luận điểm này thể hiện nội dung:",
+            "options": [
+                "Bản chất giai cấp công nhân của Đảng Cộng sản Việt Nam",
+                "Sự lãnh đạo toàn diện của Đảng Cộng sản Việt Nam đối với Nhà nước",
+                "Nền tảng tư tưởng của Đảng Cộng sản Việt Nam",
+                "Vai trò lãnh đạo của Đảng Cộng sản Việt Nam"
+            ],
+            "correct": 3,
+            "location": "Tác phẩm Đường cách mệnh (1927)"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, Đảng không phải là tổ chức làm quan phát tài, lợi ích của gắn liền với lợi ích của:",
+            "options": [
+                "Dân tộc Việt Nam",
+                "Nông dân",
+                "Công nhân",
+                "Nhân dân lao động"
+            ],
+            "correct": 0,
+            "location": "Phần 2b, đoạn từ 'Đảng không phải là tổ chức làm quan phát tài...' tới '...lợi ích của nhân dân lao động'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, Đảng không phải là tổ chức làm quan phát tài, lợi ích của gắn liền với lợi ích của:",
+            "options": [
+                "Dân tộc Việt Nam",
+                "Nông dân",
+                "Công nhân",
+                "Nhân dân lao động"
+            ],
+            "correct": 3,
+            "location": "Phần 2a, đoạn từ 'Đảng không phải là tổ chức làm quan phát tài...' tới '...lợi ích của nhân dân lao động'"
+        }{
+            "question": "“Giặc nội xâm” là cách Hồ Chí Minh ví với căn bệnh nào?",
+            "options": [
+                "Tham ô, lãng phí, quan liêu",
+                "Tự diễn biến, tự chuyển hóa, tự suy thoái",
+                "Tư túng, chia rẽ, kiêu ngạo",
+                "Quan liêu, hách dịch, cửa quyền"
+            ],
+            "correct": 0,
+            "location": "I.a từ 'Hồ Chí Minh từng nhấn mạnh...' đến '...giặc nội xâm như tham ô, lãng phí, quan liêu'"
+        },
+        {
+            "question": "Ai được bầu là Tổng Bí thư Ban chấp hành Trung ương Đảng tại Đại hội đại biểu toàn quốc lần thứ IX (2001)?",
+            "options": [
+                "Nông Đức Mạnh",
+                "Trường Chinh",
+                "Nguyễn Văn Linh",
+                "Trần Phú"
+            ],
+            "correct": 0,
+            "location": "I.b từ 'Tại Đại hội đại biểu toàn quốc lần thứ IX...' đến '...Nông Đức Mạnh được bầu làm Tổng Bí thư'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, cách mệnh muốn thành công và thành công đến nơi, trước hết phải có yếu tố nào?",
+            "options": [
+                "Đảng cách mệnh",
+                "Đảng chân chính lãnh đạo",
+                "Đảng Dân chủ",
+                "Phong trào yêu nước"
+            ],
+            "correct": 1,
+            "location": "I.a từ 'Theo Hồ Chí Minh, cách mệnh muốn thành công...' đến '...trước hết phải có Đảng chân chính lãnh đạo'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, cách mệnh muốn thành công và thành công đến nơi, trước hết phải có yếu tố nào?",
+            "options": [
+                "Đảng cách mệnh",
+                "Đảng chân chính lãnh đạo",
+                "Đảng Dân chủ",
+                "Phong trào yêu nước"
+            ],
+            "correct": 1,
+            "location": "I.a từ 'Theo Hồ Chí Minh, cách mệnh muốn thành công...' đến '...trước hết phải có Đảng chân chính lãnh đạo'"
+        },
+        {
+            "question": "Đảng Cộng sản Việt Nam do Nguyễn Ái Quốc thành lập vào năm 1930 xuất phát từ:",
+            "options": [
+                "Nhu cầu đi lên xây dựng chủ nghĩa xã hội",
+                "Thực tiễn một nước nông nghiệp chưa trải qua thời kỳ phát triển tư bản chủ nghĩa",
+                "Nhu cầu tiến hành công nghiệp hóa, hiện đại hóa đất nước",
+                "Nhu cầu tất yếu của xã hội Việt Nam"
+            ],
+            "correct": 3,
+            "location": "I.c từ 'Đảng Cộng sản Việt Nam do Nguyễn Ái Quốc thành lập...' đến '...xuất phát từ nhu cầu tất yếu của xã hội Việt Nam'"
+        },
+        {
+            "question": "Công tác “gốc” của Đảng là công tác gì?",
+            "options": [
+                "Công tác tuyên truyền",
+                "Công tác vận động",
+                "Công tác giáo dục tư tưởng",
+                "Công tác cán bộ"
+            ],
+            "correct": 3,
+            "location": "I.a từ 'Hồ Chí Minh nhấn mạnh công tác cán bộ...' đến '...công tác gốc của Đảng'"
+        },
+        {
+            "question": "Trong tác phẩm “Ba mươi năm hoạt động của Đảng” Hồ Chí Minh đã khái quát: Việc thành lập Đảng Cộng sản Đông Dương vào đầu năm 1930 là do có những yếu tố nào?",
+            "options": [
+                "Chủ nghĩa xã hội khoa học kết hợp với phong trào công nhân",
+                "Chủ nghĩa Mác - Lênin kết hợp với phong trào công nhân và phong trào trí thức",
+                "Chủ nghĩa Mác - Lênin với phong trào công nhân và phong trào yêu nước",
+                "Chủ nghĩa xã hội khoa học với phong trào nông nhân"
+            ],
+            "correct": 2,
+            "location": "I.c từ 'Trong tác phẩm “Ba mươi năm hoạt động của Đảng”...' đến '...việc thành lập Đảng xuất phát từ Chủ nghĩa Mác - Lênin với phong trào công nhân và phong trào yêu nước'"
+        },
+        {
+            "question": "Tác phẩm nào của Hồ Chí Minh viết năm 1947 tại chiến khu Việt Bắc đã nêu lên luận điểm về lựa chọn cán bộ: “Đảng phải chọn lựa những người rất trung thành và rất hăng hái, đoàn kết họ thành nhóm trung kiên lãnh đạo”?",
+            "options": [
+                "Bản án chế độ thực dân Pháp",
+                "Cần, kiệm, liêm, chính",
+                "Sửa đổi lối làm việc",
+                "Di chúc"
+            ],
+            "correct": 2,
+            "location": "I.b từ 'Tác phẩm “Sửa đổi lối làm việc” năm 1947...' đến '...Đảng phải chọn lựa những người rất trung thành và rất hăng hái, đoàn kết họ thành nhóm trung kiên lãnh đạo'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, nguyên tắc sinh hoạt Đảng nào cần thực hiện và sửa chữa giống như “mỗi ngày phải rửa mặt”?",
+            "options": [
+                "Tự phê bình và phê bình",
+                "Tập trung dân chủ",
+                "Đảng lấy chủ nghĩa Mác – Lênin làm nền tảng tư tưởng",
+                "Đảng phải liên hệ mật thiết với nhân dân"
+            ],
+            "correct": 0,
+            "location": "I.a từ 'Hồ Chí Minh nhấn mạnh tự phê bình và phê bình...' đến '...giống như mỗi ngày phải rửa mặt'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, thang thuốc tốt nhất để Đảng “thực hành dân chủ rộng rãi” là thường xuyên và nghiêm chỉnh thực hiện:",
+            "options": [
+                "Đoàn kết thống nhất trong Đảng",
+                "Tự phê bình và phê bình",
+                "Tập trung dân chủ",
+                "Kỷ luật nghiêm minh và tự giác"
+            ],
+            "correct": 1,
+            "location": "I.b từ 'Hồ Chí Minh nhấn mạnh rằng thang thuốc tốt nhất...' đến '...là thường xuyên và nghiêm chỉnh thực hiện tự phê bình và phê bình'"
+        }
+    ],
+    "chuong-4-II_lms": [
+        {
+            "question": "Theo Hồ Chí Minh, giải pháp nào có ý nghĩa lâu dài trong phòng, chống tiêu cực?",
+            "options": [
+                "Thực hành dân chủ rộng rãi, đấu tranh chống biểu hiện tự diễn biến, tự chuyển hóa",
+                "Nâng cao trình độ dân chủ trong xã hội và thực hành dân chủ rộng rãi, phát huy quyền làm chủ của nhân dân",
+                "Nâng cao dân trí của người dân và thực hành dân chủ rộng rãi, phát huy quyền làm chủ của nhân dân",
+                "Thực hành dân chủ rộng rãi, chống tham ô, lãng phí, quan liêu"
+            ],
+            "correct": 2,
+            "location": "II từ 'Hồ Chí Minh nhấn mạnh giải pháp có ý nghĩa lâu dài...' đến '...là nâng cao dân trí và thực hành dân chủ rộng rãi, phát huy quyền làm chủ của nhân dân'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, văn bản nào ghi nhận một cách toàn diện quyền con người ở Việt Nam?",
+            "options": [
+                "Đạo luật",
+                "Hồ Chí Minh toàn tập",
+                "Hiến pháp",
+                "Văn kiện Đảng"
+            ],
+            "correct": 2,
+            "location": "II.a từ 'Hồ Chí Minh nhấn mạnh vai trò của Hiến pháp...' đến '...ghi nhận một cách toàn diện quyền con người ở Việt Nam'"
+        },
+        {
+            "question": "Hiến pháp năm 2013 của nước Cộng hòa xã hội chủ nghĩa Việt Nam có bao chương, điều?",
+            "options": [
+                "13 chương và 140 điều",
+                "12 chương và 130 điều",
+                "10 chương và 110 điều",
+                "11 chương và 120 điều"
+            ],
+            "correct": 3,
+            "location": "II.b từ 'Hiến pháp năm 2013 của nước Cộng hòa xã hội chủ nghĩa Việt Nam...' đến '...gồm 11 chương và 120 điều'"
+        },
+        {
+            "question": "Trong nhà nước vì dân, Hồ Chí Minh nhấn mạnh: Cán bộ vừa là “đày tớ” vừa là người:",
+            "options": [
+                "Lãnh đạo nhân dân",
+                "Tích cực tiếp xúc, đối thoại với nhân dân để hiểu rõ tâm tư, nguyện vọng",
+                "Tận tụy và trách nhiệm",
+                "Theo đuôi quần chúng"
+            ],
+            "correct": 0,
+            "location": "II.d từ 'Trong nhà nước vì dân, Hồ Chí Minh nhấn mạnh...' đến '...cán bộ vừa là “đày tớ” vừa là người lãnh đạo nhân dân'"
+        },
+        {
+            "question": "Bản chất giai cấp công nhân của Nhà nước Việt Nam được thể hiện ở phương diện nào?",
+            "options": [
+                "Định hướng xã hội chủ nghĩa",
+                "Nguyên tắc tập trung dân chủ",
+                "Đảng lãnh đạo Nhà nước và toàn xã hội",
+                "Tất cả các án đều đúng"
+            ],
+            "correct": 3,
+            "location": "II.1.a từ 'Bản chất giai cấp công nhân của Nhà nước Việt Nam được thể hiện...' đến '...ở tất cả các phương diện trên'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, mọi quyền lực, trong đó có quyền lực nhà nước, phải nằm trong tay:",
+            "options": [
+                "Đại biểu Quốc hội",
+                "Giai cấp nông dân",
+                "Giai cấp công nhân",
+                "Dân chúng"
+            ],
+            "correct": 3,
+            "location": "II.b từ 'Theo quan điểm của Hồ Chí Minh, nhà nước của dân là nhà nước...' đến '...mọi quyền lực thuộc về nhân dân, tức dân chúng'"
+        },
+        {
+            "question": "Trong nhà nước dân chủ, lực lượng nào đóng vai trò là người chủ?",
+            "options": [
+                "Trí thức là chủ",
+                "Đảng Cộng sản Việt Nam là chủ",
+                "Công nhân là chủ",
+                "Dân là chủ"
+            ],
+            "correct": 3,
+            "location": "II.b từ 'Theo quan điểm của Hồ Chí Minh, nhà nước của dân là nhà nước...' đến '...dân là chủ'"
+        },
+        {
+            "question": "Tất cả mọi quyền lực trong nhà nước dân chủ đều thuộc về lực lượng nào?",
+            "options": [
+                "Giai cấp công nhân",
+                "Giai cấp nông dân",
+                "Đội ngũ trí thức",
+                "Nhân dân"
+            ],
+            "correct": 3,
+            "location": "II.b từ 'Theo quan điểm của Hồ Chí Minh, nhà nước của dân là nhà nước...' đến '...mọi quyền lực đều thuộc về nhân dân'"
+        },
+        {
+            "question": "Nhân dân thực thi quyền lực của mình trong nhà nước dân chủ thông qua mấy hình thức?",
+            "options": [
+                "2",
+                "3",
+                "5",
+                "4"
+            ],
+            "correct": 0,
+            "location": "II.b từ 'Trong Nhà nước dân chủ, nhân dân thực thi quyền lực...' đến '...thông qua hai hình thức dân chủ trực tiếp và dân chủ gián tiếp'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, “lấy của công dùng vào việc tư, quên cả thanh liêm đạo đức” là một trong những biểu hiện tiêu cực của “căn bệnh”?",
+            "options": [
+                "Tư túng, chia rẽ, kiêu ngạo",
+                "Tham ô, lãng phí, quan liêu",
+                "Đặc quyền, đặc lợi",
+                "Tham ô, đặc quyền, kiêu ngạo"
+            ],
+            "correct": 1,
+            "location": "III.b từ 'Hồ Chí Minh coi tham ô, lãng phí, quan liêu...' đến '...lấy của công dùng vào việc tư, quên cả thanh liêm đạo đức'"
+        },
+        {
+            "question": "Chọn những cụm từ sau để hoàn thành luận điểm: “làm sao cho nhân dân biết hưởng (…), biết dùng (…) của mình, dám nói, dám làm”.",
+            "options": [
+                "quyền làm chủ - quyền làm chủ",
+                "quyền ứng cử - quyền ứng cử",
+                "quyền sống – quyền sống",
+                "quyền dân chủ - quyền dân chủ"
+            ],
+            "correct": 3,
+            "location": "II.b từ 'Hồ Chí Minh chỉ rõ sự cần thiết...' đến '...làm sao cho dân biết hưởng quyền dân chủ, biết dùng quyền dân chủ của mình'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, Nhà nước dựa trên nền tảng pháp lý của một chế độ dân chủ và theo các trình tự dân chủ với các quyền:",
+            "options": [
+                "Bầu cử, tự do",
+                "Bầu cử, phúc quyết",
+                "Bầu cử, bãi miễn",
+                "Bầu cử, ứng cử"
+            ],
+            "correct": 1,
+            "location": "II.b từ 'Hồ Chí Minh nhấn mạnh rằng nhà nước dân chủ...' đến '...với các quyền bầu cử và phúc quyết'"
+        },
+        {
+            "question": "Luật pháp luôn “bảo vệ cái đúng, cái tốt, lấy mục đích giáo dục, cảm hoá, thức tỉnh con người làm căn bản”. Điều này thể hiện nội dung gì của pháp luật?",
+            "options": [
+                "Chủ nghĩa nhân văn",
+                "Giá trị nhân bản, khuyến thiện",
+                "Tính nhân văn, khuyến thiện",
+                "Tinh thần nhân đạo"
+            ],
+            "correct": 2,
+            "location": "II.c từ 'Luật pháp mang tính nhân văn, khuyến thiện...' đến '...thể hiện qua việc bảo vệ cái đúng, cái tốt và thức tỉnh con người'"
+        },
+        {
+            "question": "Ngày 02/03/1946, Quốc hội khoá I của nước Việt Nam Dân chủ Cộng hòa đã bầu ra tổ chức nào?",
+            "options": [
+                "Chính phủ Liên hiệp đầu tiên",
+                "Chính phủ Liên minh các lực lượng dân tộc, dân chủ và hòa bình Việt Nam",
+                "Chính phủ lâm thời miền Nam Việt Nam",
+                "Chính phủ nước Cộng hòa xã hội chủ nghĩa Việt Nam"
+            ],
+            "correct": 0,
+            "location": "Lịch sử Việt Nam, ngày 02/03/1946, Quốc hội khóa I đã bầu ra Chính phủ Liên hiệp đầu tiên nhằm đối phó với tình hình chính trị phức tạp thời kỳ này."
+        },
+        {
+            "question": "Theo Hồ Chí Minh, những căn bệnh nào có các biểu hiện: Kéo bè, kéo cánh, bà con, bạn hữu mình không tài năng gì cũng kéo vào chức này chức nọ. Người có tài có đức, nhưng không vừa lòng mình thì đẩy ra ngoài?",
+            "options": [
+                "Háo danh, kiêu ngạo",
+                "Chạy chức, chạy quyền, ham địa vị, tiền tài",
+                "Kéo bè kéo cánh",
+                "“Tư túng”, “chia rẽ”, “kiêu ngạo”"
+            ],
+            "correct": 3,
+            "location": "III.b từ 'Hồ Chí Minh đã phê phán các căn bệnh...' đến '...kéo bè kéo cánh được gọi là 'tư túng, chia rẽ, kiêu ngạo''"
+        },
+        {
+            "question": "Trong “Thư gửi Hội nghị Tư pháp toàn quốc”, Hồ Chí Minh đã nhắn nhủ các cán bộ thuộc ngành hành pháp và tư pháp điều gì?",
+            "options": [
+                "“Một dân tộc, một đảng và mỗi con người ngày hôm qua là vĩ đại, có sức hấp dẫn lớn, không nhất định hôm nay và ngày mai vẫn được mọi người yêu mến và ca ngợi, nếu lòng dạ không trong sáng nữa, nếu sa vào chủ nghĩa cá nhân”",
+                "“Giàu sang không thể quyến rũ. Nghèo khó không thể chuyển lay. Uy lực không thể khuất phục”",
+                "“Mỗi đảng viên và cán bộ phải thật sự thấm nhuần đạo đức cách mạng, thật sự cần kiệm liêm chính, chí công vô tư”",
+                "“Lẽ tất nhiên các bạn phải nêu cao cái gương “phụng công, thủ pháp, chí công, vô tư” cho nhân dân noi theo”"
+            ],
+            "correct": 3,
+            "location": "III.b từ 'Trong Thư gửi Hội nghị Tư pháp toàn quốc, Hồ Chí Minh nhấn mạnh...' đến '...nêu cao cái gương phụng công, thủ pháp, chí công, vô tư cho nhân dân noi theo'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, để pháp luật của Nhà nước, kỷ luật của Đảng phải nghiêm minh thì nhà nước cần phải thực hiện:",
+            "options": [
+                "Mọi việc trong cuộc sống cần được điều chỉnh bởi thần linh pháp quyền",
+                "Trăm điều phải có thần linh pháp quyền",
+                "Pháp quyền chính là yếu tố quyết định trong trăm công nghìn việc",
+                "Pháp quyền là nền tảng cần thiết trong mọi lĩnh vực"
+            ],
+            "correct": 1,
+            "location": "II.c từ 'Hồ Chí Minh nhấn mạnh vai trò của pháp luật...' đến '...trăm điều phải có thần linh pháp quyền'"
+        },
+        {
+            "question": "Theo Hồ Chí Minh, những căn bệnh nào là “giặc nội xâm”, “giặc ở trong lòng”, nguy hiểm hơn “giặc ngoại xâm”?",
+            "options": [
+                "Háo danh, kiêu ngạo",
+                "Kéo bè kéo cánh",
+                "Chạy chức, chạy quyền, ham địa vị, tiền tài",
+                "Tham ô, lãng phí, quan liêu"
+            ],
+            "correct": 3,
+            "location": "III.b từ 'Hồ Chí Minh từng khẳng định tham ô, lãng phí, quan liêu...' đến '...là giặc nội xâm, giặc ở trong lòng, còn nguy hiểm hơn giặc ngoại xâm'"
+        },
+        {
+            "question": "Nhà nước dân chủ được xây dựng dựa trên cơ sở của khối liên minh nào?",
+            "options": [
+                "Liên minh công nhân – trí thức – tư sản",
+                "Liên minh công nhân – nông dân – tư sản",
+                "Liên minh công nhân – nông dân – trí thức",
+                "Liên minh nông dân – công nhân – tiểu tư sản"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Theo Hồ Chí Minh, để kiểm soát tốt quyền lực của nhà nước, việc kiểm soát cần tiến hành như thế nào?",
+            "options": [
+                "Có hệ thống",
+                "Có kế hoạch",
+                "Có sáng kiến và trung thực",
+                "Có đào tạo"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Theo Hồ Chí Minh, bản chất giai cấp giai cấp công nhân của thể hiện ở nguyên tắc tổ chức và hoạt động nào?",
+            "options": [
+                "Đoàn kết, thống nhất trong Đảng",
+                "Kỷ luật nghiêm minh và tự giác",
+                "Tự phê bình và phê bình",
+                "Tập trung dân chủ"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Cuộc Tổng tuyển cử bầu Quốc hội khoá I của nước Việt Nam Dân chủ Cộng hòa diễn ra vào ngày, tháng, năm nào?",
+            "options": [
+                "2/03/1946",
+                "06/1/1945",
+                "6/01/1946",
+                "2/09/1945"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Căn “bệnh mẹ”, xuất phát từ sự thiếu tu dưỡng, rèn luyện của bản thân cán bộ là:",
+            "options": [
+                "Chủ nghĩa cá nhân",
+                "Chủ nghĩa cục bộ",
+                "Chủ nghĩa sùng bái cá nhân",
+                "Chủ nghĩa tự do cá nhân"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Theo Hồ Chí Minh, nếu Đảng và Nhà nước không có chính sách bảo vệ cán bộ một cách hiệu quả thì sẽ dẫn đến nguy cơ gì?",
+            "options": [
+                "Mất cán bộ",
+                "Mất chính quyền",
+                "Mất sự lãnh đạo của Đảng",
+                "Mất chế độ"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Vấn đề nào cần đặc biệt chú trọng nhằm giữ vững bản chất của Nhà nước, cũng như chống suy thoái về tư tưởng, chính trị, đạo đức của cán bộ, công chức?",
+            "options": [
+                "Kiểm soát quyền lực của nhà nước",
+                "Chống tham ô, lãng phí",
+                "Xây dựng đạo đức cách mạng cho đội ngũ cán bộ",
+                "Chống chủ nghĩa cá nhân"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Biện pháp để tiết kiệm, là quốc sách của mọi quốc gia theo Hồ Chí Minh cần phải chống lại căn bệnh gì?",
+            "options": [
+                "Tham ô",
+                "Đặc quyền",
+                "Lãng phí",
+                "Quan liêu"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Bản chất giai cấp giai cấp công nhân thống nhất với tính nhân dân và tính dân tộc là một trong những biểu hiện của:",
+            "options": [
+                "Nhà nước trong sạch",
+                "Nhà nước vững mạnh",
+                "Nhà nước dân chủ",
+                "Nhà nước pháp quyền"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Theo Hồ Chí Minh, Nhà nước do nhân dân có nghĩa là “dân làm chủ”, điều này còn có nghĩa là gì?",
+            "options": [
+                "Tất cả các phương án đều đúng",
+                "Nhà nước do nhân dân lập nên dưới sự lãnh đạo của giai cấp công nhân",
+                "Nhà nước do nhân dân lập nên dưới sự lãnh đạo của trí thức",
+                "Nhà nước do nhân dân lập nên dưới sự lãnh đạo của Đảng"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Căn bệnh nào theo Hồ Chí Minh chỉ biết “khai hội, viết chỉ thị, xem báo cáo trên giấy chứ không kiểm tra đến nơi đến chốn”?",
+            "options": [
+                "quan liêu",
+                "tham ô",
+                "lãng phí",
+                "tư túng"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Nhà nước Việt Nam lựa chọn con đường phát triển nào?",
+            "options": [
+                "Xây dựng chủ nghĩa xã hội và đi đến chủ nghĩa cộng sản",
+                "Đánh đổ chủ nghĩa thực dân Pháp, xây dựng chế độ dân chủ tư sản",
+                "Tất cả các đáp án đều sai",
+                "Thực hiện đánh đổ chế độ phong kiến đi lên chủ nghĩa cộng sản"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Pháp luật trong Nhà nước pháp quyền nhân nghĩa phải là pháp luật vì ai?",
+            "options": [
+                "Con người",
+                "Đồng bào",
+                "Giai cấp công nhân, nhân dân lao động",
+                "Người trí thức"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Những bản Hiến pháp nào của nước Việt Nam Dân chủ Cộng hòa do Hồ Chí Minh trực tiếp lãnh đạo soạn thảo?",
+            "options": [
+                "Hiến pháp năm 1992 và Hiến pháp năm 2013",
+                "Hiến pháp năm 1946 và Hiến pháp năm 1959",
+                "Hiến pháp năm 1980 và Hiến pháp năm 1992",
+                "Hiến pháp năm 1946 và Hiến pháp năm 1980"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Theo Hồ Chí Minh, để kiểm soát tốt quyền lực của nhà nước, cần phải có mấy điều kiện?",
+            "options": [
+                "2",
+                "3",
+                "5",
+                "4"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Đây là biểu hiện của chủ nghĩa gì theo Hồ Chí Minh: Cậy mình trong cơ quan chính quyền để cửa quyền, hách dịch với dân, lạm quyền, vơ vét tiền của của nhân dân?",
+            "options": [
+                "Chủ nghĩa cá nhân",
+                "Chủ nghĩa tự do cá nhân",
+                "Chủ nghĩa sùng bái cá nhân",
+                "Chủ nghĩa cá thể"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Theo Hồ Chí Minh có 2 cách kiểm soát là “từ trên xuống” và:",
+            "options": [
+                "Từ trái sang",
+                "Từ phải qua",
+                "Từ Đảng đến chính quyền",
+                "Từ dưới lên"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Quyền lực của Nhà nước do lực lượng nào “ủy thác”?",
+            "options": [
+                "Đảng Cộng sản Việt Nam",
+                "Các đoàn thể quần chúng",
+                "Nhân dân",
+                "Mặt trận Tổ quốc Việt Nam"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Đối tượng nào được Hồ Chí Minh “đặc biệt” quan tâm giáo dục pháp luật để xây dựng nhà nước pháp quyền, đảm bảo mọi quyền và nghĩa vụ công dân được thực thi trong cuộc sống?",
+            "options": [
+                "Công an nhân dân",
+                "Quân đội nhân dân",
+                "Thiếu niên nhi đồng",
+                "Thế hệ trẻ"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Để xây dựng nhà nước pháp quyền, cùng với công tác lập pháp, Hồ Chí Minh chú trọng đưa nội dung gì vào trong cuộc sống?",
+            "options": [
+                "Lý tưởng sống",
+                "Kinh tế",
+                "Pháp luật",
+                "Đào tạo cán bộ"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Có bao nhiêu đạo luật và sắc lệnh do Hồ Chí Minh ký lệnh công bố?",
+            "options": [
+                "56 đạo luật và 613 sắc lệnh",
+                "16 đạo luật và 613 sắc lệnh",
+                "6 đạo luật và 613 sắc lệnh",
+                "16 đạo luật và 213 sắc lệnh"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Tổ chức nào giữ vai trò quyết định để kiểm soát quyền lực của nhà nước, giữ vững bản chất của Nhà nước, cũng như chống suy thoái về tư tưởng, chính trị, đạo đức của cán bộ, công chức?",
+            "options": [
+                "Đoàn Thanh niên Cộng sản Hồ Chí Minh",
+                "Hội đồng nhân dân các cấp",
+                "Đảng Cộng sản Việt Nam",
+                "Mặt trận Tổ quốc Việt Nam"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Trong bản “Yêu sách của Nhân dân An Nam” Hồ Chí Minh đã nêu lên luận điểm quan trọng gì về xây dựng nền tảng pháp lý cho Nhà nước Việt Nam mới?",
+            "options": [
+                "Cải cách nền pháp lý ở Đông Dương bằng cách làm cho người bản xứ cũng được hưởng quyền bảo đảm về mặt pháp luật như người Châu Âu",
+                "Cải cách nền pháp lý ở Đông Dương bằng cách làm cho người bản xứ cũng được hưởng quyền bảo đảm về mặt pháp luật như người Châu Phi",
+                "Cải cách nền pháp lý ở Đông Dương bằng cách làm cho người bản xứ cũng được hưởng quyền bảo đảm về mặt pháp luật như người Châu Mỹ latinh",
+                "Cải cách nền pháp lý ở Đông Dương bằng cách làm cho người bản xứ cũng được hưởng quyền bảo đảm về mặt pháp luật như người Châu Á"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Theo Hồ Chí Minh, để kiểm soát tốt quyền lực của nhà nước thì việc kiểm soát phải có hệ thống và người đi kiểm soát cần có phẩm chất gì?",
+            "options": [
+                "Thông minh",
+                "Uy tín",
+                "Đạo đức",
+                "Tài năng"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Nhà nước Việt Nam mới mang bản chất của giai cấp, tầng lớp, lực lượng nào?",
+            "options": [
+                "Giai cấp tư sản",
+                "Tầng lớp trí thức",
+                "Lực lượng tiểu tư sản",
+                "Giai cấp công nhân"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Chọn đáp án không đúng về phương thức lãnh đạo của Đảng được xác định trong Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011):",
+            "options": [
+                "Đảng lãnh đạo thông qua tổ chức đảng và đảng viên hoạt động trong các tổ chức của hệ thống chính trị",
+                "Đảng lãnh đạo bằng hành động gương mẫu của đảng viên",
+                "Đảng lãnh đạo bằng công tác tuyền truyền, thuyết phục, vận động, tổ chức, kiểm tra, giám sát",
+                "Đảng vừa là thành viên, vừa là tổ chức lãnh đạo hệ thống chính trị, Đảng đứng trên hệ thống chính trị"
             ],
             "correct": 3
         }
