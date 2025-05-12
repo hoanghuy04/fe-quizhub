@@ -38,6 +38,7 @@ const QuizContainer = () => {
     { value: 'chuong-4-file2', label: 'Chương 4 - File 2' },
     { value: 'chuong-4-I_lms', label: 'Chương 4 - I' },
     { value: 'chuong-4-II_lms', label: 'Chương 4 - II' },
+    { value: 'chuong-5-lms', label: 'Chương 5 - LMS' },
   ];
 
   const shuffleArray = (array) => {
